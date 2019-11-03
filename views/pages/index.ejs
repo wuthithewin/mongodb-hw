@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body class="container">
+
+	<main>
+		<h2>main</h2>
+		<div class="jumbotron">
+			<h1>This is great</h1>
+			<p>Welcome to templating using EJS</p>
+		</div>
+		<% for(var i=0; i<data.length; i++) { %>
+			<a href=<%= data[i].link %>>
+			<p><%= data[i]._id %> - <%= data[i].title %></p>
+		</a>
+			<button data-id=<%= data[i]._id %>>delete</button>
+		<% } %>
+	</main>
+
+	<footer>
+		<% include ../partials/footer %>
+	</footer>
+	
+</body>
+</html>
